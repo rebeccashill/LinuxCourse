@@ -25,4 +25,13 @@
   /etc = configuration files
   /bin -> /usr/bin = everyday user commands
   /sbin -> /usr/sbin = system/filesystem commands
-  
+  /opt = optional add-on applications (not part of OS apps)
+  /proc = running processes (only exist in memory)
+  /lib -> usr/lib = C programming library files needed by commands and apps
+    -strace -e open pwd
+  /tmp = directory for temporary files
+  /home = directory for users
+  /var = system logs
+  /run = system deamons that start very early (e.g., systemd & udev) to store temporary runtime files like PID files
+  /mnt = to mount external file system (e.g. NFS)
+  /media = for cdrom mounts
