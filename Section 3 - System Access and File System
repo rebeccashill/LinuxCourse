@@ -43,3 +43,6 @@
   "pwd" stands for print working directory, tells you where your current location is
   "ls" stands for list, lists all the directories/files within a current working directory
   su- = add password, will tell you the last login
+
+**Linux File or Directory Properties**
+  Each file or directory in Linux has detailed information or properties
