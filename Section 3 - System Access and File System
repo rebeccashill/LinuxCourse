@@ -1,0 +1,5 @@
+Access to Linux via Putty
+  ssh, ip addr = find Linux machine IP
+  ifconfig
+    - to use ifconfig, run "yum install net-tools"
+  -l username ip address to connect to Linux machine
