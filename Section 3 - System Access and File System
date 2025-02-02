@@ -1,5 +1,13 @@
-Access to Linux via Putty
+**Access to Linux via Putty**
   ssh, ip addr = find Linux machine IP
   ifconfig
     - to use ifconfig, run "yum install net-tools"
   -l username ip address to connect to Linux machine
+**Command Prompts and Getting Prompts Back**
+  [root@MyFirstLinuxVM ~] #
+    - username, hostname, Prompt symbol
+  To get your prompt back: Ctrl + C
+  whoami = find the username
+  hostname = find the name of the machine
+  top = provides a real-time view of running processes and system resource usage
+  Ctrl C = to get unstuck, get your prompt back
