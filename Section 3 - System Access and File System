@@ -3,6 +3,7 @@
   ifconfig
     - to use ifconfig, run "yum install net-tools"
   -l username ip address to connect to Linux machine
+
 **Command Prompts and Getting Prompts Back**
   [root@MyFirstLinuxVM ~] #
     - username, hostname, Prompt symbol
@@ -11,3 +12,7 @@
   hostname = find the name of the machine
   top = provides a real-time view of running processes and system resource usage
   Ctrl C = to get unstuck, get your prompt back
+
+**Introduction to Linux File System**
+  cd / = go into root directory
+  ls -l = shows a list of different directories
