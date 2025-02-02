@@ -16,3 +16,13 @@
 **Introduction to Linux File System**
   cd / = go into root directory
   ls -l = shows a list of different directories
+
+*File System Structure and its Description**
+  /boot = Contains file that is used by the boot loader (grub.cfg)
+    when an operating system is booting up, the system looks for /boot
+  /root = root user home directory. It is not the same as /
+  /dev = system devices(e.g. disk, cdrom, speakers, flassdrive, keyboard, etc.)
+  /etc = configuration files
+  /bin -> /usr/bin = everyday user commands
+  /sbin -> /usr/sbin = system/filesystem commands
+  
