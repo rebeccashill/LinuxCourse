@@ -46,3 +46,27 @@
 
 **Linux File or Directory Properties**
   Each file or directory in Linux has detailed information or properties
+
+**Linux File Types**
+  Directories
+  Links
+  Plain text files
+  Block files
+    Block device file
+      Hard drives
+      USB drives
+  Text files
+  Executable files
+  Images
+  Videos
+  Types of links:
+    Soft link
+    Hard link
+  File symbol          Meaning
+  -                    Regular file
+  d                    Directory
+  l                    Link
+  c                    Special file or device file
+  s                    socket file = used for network communication between processes
+  p                    Named pipe
+  b                    Block device
