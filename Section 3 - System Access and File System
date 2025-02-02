@@ -17,7 +17,7 @@
   cd / = go into root directory
   ls -l = shows a list of different directories
 
-*File System Structure and its Description**
+**File System Structure and its Description**
   /boot = Contains file that is used by the boot loader (grub.cfg)
     when an operating system is booting up, the system looks for /boot
   /root = root user home directory. It is not the same as /
@@ -35,3 +35,11 @@
   /run = system deamons that start very early (e.g., systemd & udev) to store temporary runtime files like PID files
   /mnt = to mount external file system (e.g. NFS)
   /media = for cdrom mounts
+
+**File System Navigation Commands**
+  Navigating File System
+    when navigating a UNIX File System, there are a few important commands: "cd", "pwd", "ls"
+  "cd" = change directory, primary cmd for moving you around the filesystem
+  "pwd" stands for print working directory, tells you where your current location is
+  "ls" stands for list, lists all the directories/files within a current working directory
+  su- = add password, will tell you the last login
