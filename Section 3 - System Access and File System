@@ -108,3 +108,9 @@
   Commands used to find files/directories
     find
     locate
+      If locate doesn't output any result, then as root run "updatedb"
+  mv <source file> <destination folder> = move a file
+  find / (name of file) = find the file when you don't know the directory name
+    - use su- to get into 'permission denied' directory
+  man find = the manual for find
+  
