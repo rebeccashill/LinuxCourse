@@ -137,3 +137,23 @@
   ^ = (caret) "the beginning of the line"
   $ = (dollar sign) "the end of the line"
   
+**Soft and Hard Links**
+  inode = Pointer or number of a file on the hard disk
+  Soft Link = link will be removed if file is removed or renamed
+  Hard Link = Deleting, renaming, or moving the original file will not affect the hard link
+  ln = hard link
+  ln -s = soft link
+
+  Please note:
+    You cannot create soft or hard link within the same directory with the same name. That is why we will create links in /tmp directory.
+  ln -s /home/user/hulk -> create soft link /home/user/hulk
+    looks like hulk -> /home/user/hulk
+  echo "hulk is a superhero">hulk
+    cat hulk to see it (returns "hulk is a superhero")
+  ls -li to find inodes of the file
+  ls -ltri hulk to find the inode for hulk
+  echo "123" >> hulk            hulk is a superhero
+  cat hulk                      123
+  * If source file is deleted -> soft link is broken
+    If source file is deleted -> hard link is alright
+  Avoid using spaces in Linux
