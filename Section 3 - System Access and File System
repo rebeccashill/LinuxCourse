@@ -114,3 +114,26 @@
     - use su- to get into 'permission denied' directory
   man find = the manual for find
   
+**Difference Between Find and Locate**
+  locate: locate uses a prebuilt database, which should be regularly updated
+          can be inaccurate if the database is not updated
+  find: iterates over a filesystem to locate files
+          locate is much faster than find, but find is more accurate
+  to update locate database, run updatedb
+    - use su - for updatedb to get rid of error
+    - find . -name susan is the same as locate susan
+
+**WildCards (*, ?, ^ [])**
+  a wildcard is a character that can be used as a subsiste for any of a class of characters in a search
+  * = represents zero or more characters
+  ? = represents a single character
+  [] = represents a range of characters
+  touch abcd(1..9)-xyz = create files abcd*-xyz (1 to 9)
+    rm a*, rm *xy* = removes all files w/ those letters in it
+      rm *xyz = another way to remove the files
+  ls -l ?bcd* = shows the files as well
+  ls -l [cd] = anything that has c & d in the file
+  \ = (slash) "as an escape character"
+  ^ = (caret) "the beginning of the line"
+  $ = (dollar sign) "the end of the line"
+  
