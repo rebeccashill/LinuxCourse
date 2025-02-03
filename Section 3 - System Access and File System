@@ -77,4 +77,29 @@
   Old password: -enter your current password
   New password: -enter your new password
   Retype new password: -re-enter your new password
-  
+
+**Absolute and Relative Paths**
+  There are 2 paths to navigate to a file system
+    -absolute path
+    -relative path
+  An absolute path always begins with a "/". This indicates that the path starts at the root directory.
+    Example of an absolute path: cd /var/log/samba
+  A relative path does not begin with a "/". It identifies a location relative to your current position.
+    An example of a relative path is
+      cd /var
+      cd log
+      cd samba
+  Go to samba folder: su- (log into root) -> cd /var/log/samba
+
+**Creating Files and Directories**
+  Ways to create files: touch, cp, vi
+    -touch = create a new fine (touch jerry)
+    -cp = copies one file to another file (touch jerry lex)
+    -vi = sends you to file editor mode (:wq! to exit)
+  Way to create directory: mkdir
+    -mkdir
+  Cannot touch /etc: it's a read-only file system
+
+**Copying Directories**
+  Command to copy a directory: cp
+    -cp -R <source_folder><destination_folder>
