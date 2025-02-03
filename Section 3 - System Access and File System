@@ -70,3 +70,11 @@
   s                    socket file = used for network communication between processes
   p                    Named pipe
   b                    Block device
+
+**Changing Password**
+  Command: passwd userid
+    Change your initial password as soon as you login
+  Old password: -enter your current password
+  New password: -enter your new password
+  Retype new password: -re-enter your new password
+  
