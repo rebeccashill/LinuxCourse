@@ -93,9 +93,9 @@
 
 **Creating Files and Directories**
   Ways to create files: touch, cp, vi
-    -touch = create a new fine (touch jerry)
-    -cp = copies one file to another file (touch jerry lex)
-    -vi = sends you to file editor mode (:wq! to exit)
+    touch = create a new fine (touch jerry)
+    cp = copies one file to another file (touch jerry lex)
+    vi = sends you to file editor mode (:wq! to exit)
   Way to create directory: mkdir
     -mkdir
   Cannot touch /etc: it's a read-only file system
@@ -103,3 +103,8 @@
 **Copying Directories**
   Command to copy a directory: cp
     -cp -R <source_folder><destination_folder>
+
+**Finding Files & Directories (find, locate)**
+  Commands used to find files/directories
+    find
+    locate
