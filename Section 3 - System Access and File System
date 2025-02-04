@@ -124,7 +124,7 @@
     - find . -name susan is the same as locate susan
 
 **WildCards (*, ?, ^ [])**
-  a wildcard is a character that can be used as a subsiste for any of a class of characters in a search
+  a wildcard is a character that can be used as a substitute for any of a class of characters in a search
   * = represents zero or more characters
   ? = represents a single character
   [] = represents a range of characters
