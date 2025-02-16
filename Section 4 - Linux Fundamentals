@@ -1,4 +1,21 @@
 **Linux Command Syntax**
+Command options and arguments
+  - Commands typically have the syntax:
+      command option(s) arguments(s)
+Options:
+  Modify the way that a command works
+  Usually consists of a hyphen or dash followed by a single letter
+  Some commands accept multiple options which can usually be grouped together after a single hyphen
+
+ls -lt = order files based on last modified time
+rm -f = remove file
+ls -a, --all = do not ignore entries starting with .
+ls -A, --almost-all = do not list implied . and ..
+ls -l --author = print the author of each file
+ls -b, --escape = print C-style escapes for nongraphic characters
+ls --block-size=SIZE = scale sizes by SIZE before printing them
+
+To see these options and more, use the command "man ls"
 
 **Files and Directory Permissions (chmod)**
 
