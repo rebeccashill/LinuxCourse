@@ -1,0 +1,22 @@
+**Linux Command Syntax**
+
+**Files and Directory Permissions (chmod)**
+
+**File Permissions Using Numeric Mode**
+
+**File Ownership Commands (chown, chgrp)**
+
+**Access Control List (ACL)**
+
+**Help Commands**
+
+**TAB Completion and Up Arrow Keys**
+
+**Adding Text to Files**
+
+**Input and Output Redirects (>, >>, <, stdin, stdout, and stderr)**
+
+**Standard Output to a File (tee command)**
+
+**Pipes (|)**
+
