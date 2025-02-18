@@ -56,6 +56,11 @@ chmod 604 -> -rw----r--
 There are also online calculators for Linux permissions
 
 **File Ownership Commands (chown, chgrp)**
+Command to change file ownership
+  -chown = changes the ownership of a file
+  -chgrp = changes the group ownership of a file
+Recursive ownership change option (Cascade)
+  - -R
 
 **Access Control List (ACL)**
 
