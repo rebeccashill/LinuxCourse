@@ -18,8 +18,42 @@ ls --block-size=SIZE = scale sizes by SIZE before printing them
 To see these options and more, use the command "man ls"
 
 **Files and Directory Permissions (chmod)**
+There are 3 types of permissions:
+  - r = read
+  - w = write
+  - x = execute - running a program
+Each permission (rwx) can be controlled at 3 levels
+  - u - user = yourself
+  - g - group = can be people in the same project
+  - o - other = everyone on the system
+File or directory permission can be displayed by running ls -l command
+chmod = command to change permission
+  - man chmod to find out more
+chmod g-w filename = get rid of write permission
+chmod a-r filename = gets rid of all read permissions
+chmod u-w filename = remove write permissions from user
+chmod u+rw filename = adds read & write permissions to user
+chmod o+rw filename = adds read & write permissions to others
 
 **File Permissions Using Numeric Mode**
+Permission to a file and directory can also be assigned numerically
+  - chmod ugo+r FILE    OR     - chmod 444 FILE
+Owners assign permission on every file and directory
+REMINDER: ls -ltr to see permissions
+Assigning numbers to permission types
+    0    No Permission       ---
+    1    Execute             --x
+    2    Write               -w-
+    3    Execute+Write       -wx
+    4    Read                r--
+    5    Read+Execute        r-x
+    6    Read+Write          rw-
+    7    Read+Write+Execute  rwx
+ex:chmod 764 FILE
+    -rwxrw-r--
+chmod 000 filename: remove permissions
+chmod 604 -> -rw----r--
+There are also online calculators for Linux permissions
 
 **File Ownership Commands (chown, chgrp)**
 
