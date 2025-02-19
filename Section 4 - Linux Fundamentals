@@ -63,10 +63,56 @@ Recursive ownership change option (Cascade)
   - -R
 
 **Access Control List (ACL)**
+What is ACL?
+  - Access Control List (ACL)
+  - Provides an additional, more flexible permission mechanism for file systems
+  - Designed to assist with UNIX file permissions
+  - Allows you to give permissions for any user or group to any disc resource
+List of commands for setting up ACL
+  -setfac1 -m u:user:rwx /path/to/file: to add permission for user
+  -setfac1 -m g:group:rw: to add permissions for a group
+  -setfac1 -dm "entry" /path/to/dir: to allow all files or directories to inherit ACL entries from the directory it is within
+  -setfac1 -x u:user /path/to/file: to remove a specific entry
+  -setfac1 -b path/to/file: to remove all entries (for all users)
+Note:
+  As you assign the ACL permission to a file/directory, it adds + sign at the end of the permission
+  Setting w permission with ACL does not allow to remove a file
+  Also, you should be using setfac1 and then getfac1 together
+touch tx <------------------------> create file
+ls -l tx <------------------------> -rw-r--r--
+getfac1 tx <----------------------> #file: tx        user:: rw-
+                                   #owner: root     group::r--
+                                   #group: root     other::r--
+setfac -m u:user:rwx /tmp/tx <----> sets permissions to the user
+getfac1 /tmp/tx <-----------------> #file tmp/tx    user:: rw-
+                                #owner: root    user:rebeccca:rw-
+                                #group: root    group::r--
+                                                mask::rw-
+                                                other::r--
+setfac -x u:rebeccca /tmp/tx <----> sets permissions to the user
+getfac1 tmp/tx <------------------> #file tmp/tx    user:: rw-
+                                    #owner: root    user:rebeccca:rw-
+                                    #group: root    group::r--
+                                                    mask::rw-
+                                                    other::r--
+rm tx <---------------------------> action not permitted after the last setfac
 
 **Help Commands**
+There are 3 types of help commands
+  -whatis command
+  -command --help
+  -man command
+whatis ls = ls(l), ls(lp) -> list directory contents
+whatis pwd = pwd(l), pwd(lp) -> print name of current/working directory, return working directory name
 
 **TAB Completion and Up Arrow Keys**
+Hitting TAB key completes the available commands, files, or directories
+  - chm TAB
+  - ls j<TAB>
+  - cd Des<TAB>
+Hitting up arrow key on the keyboard returns the last command ran
+ch -> tab twice -> all the commands that start with ch
+ls l -> tab twice -> all the files that start with 'l'
 
 **Adding Text to Files**
 
