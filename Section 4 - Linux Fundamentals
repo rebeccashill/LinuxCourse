@@ -179,6 +179,44 @@ cat errorfile ----> Connection refused
 
 
 **Standard Output to a File (tee command)**
+tee = command used to store & view (both at the same time) the output of any command
+the command is named after the T-splitter used in plumbing
+  - breaks the output of a program so that it can be displayed & saved in a file
+  - does both tasks simultaneously, copies the result into the specified files or variables & also display the result
+  - output goes into file and should show up on screen
+                command -> tee -> stdout
+                            |
+                            -
+                           file
+Project:
+echo "David Puddy" > eliane-david
+  David Puddy
+echo "David Puddy" | tee eliane
+  David Puddy
+cat eliane
+  David Puddy
+echo "David and Eliane" | tee eliane                        (Erases contents of the old file)
+  David and Eliane
+cat eliane
+  David and Eliane
+echo "David Puddy" | tee -a eliane
+  David Puddy
+cat eliane
+  David and Eliane
+  David Puddy
+
+wc -c eliane                                                (how many characters do we have in a file?)
+29 eliane
+
+ls -l | tee listdir                                         (lists all directories)
+cat listdir                                                 (lists all directories)
+ls -l | tee file1 file2 file3                               (lists all directories in all 3 files)
+
+tee --help
+  - help w/ tee command
 
 **Pipes (|)**
+A pipe is used by the shell to connect the output of one command directly to the input of another command
+symbol for pipe is a vertical bar (|)
+      command1 [arguments] | command2 [arguments]
 
