@@ -17,6 +17,7 @@ ls --block-size=SIZE = scale sizes by SIZE before printing them
 
 To see these options and more, use the command "man ls"
 
+
 **Files and Directory Permissions (chmod)**
 There are 3 types of permissions:
   - r = read
@@ -34,6 +35,7 @@ chmod a-r filename = gets rid of all read permissions
 chmod u-w filename = remove write permissions from user
 chmod u+rw filename = adds read & write permissions to user
 chmod o+rw filename = adds read & write permissions to others
+
 
 **File Permissions Using Numeric Mode**
 Permission to a file and directory can also be assigned numerically
@@ -55,12 +57,14 @@ chmod 000 filename: remove permissions
 chmod 604 -> -rw----r--
 There are also online calculators for Linux permissions
 
+
 **File Ownership Commands (chown, chgrp)**
 Command to change file ownership
   -chown = changes the ownership of a file
   -chgrp = changes the group ownership of a file
 Recursive ownership change option (Cascade)
   - -R
+
 
 **Access Control List (ACL)**
 What is ACL?
@@ -97,6 +101,7 @@ getfac1 tmp/tx <------------------> #file tmp/tx    user:: rw-
                                                     other::r--
 rm tx <---------------------------> action not permitted after the last setfac
 
+
 **Help Commands**
 There are 3 types of help commands
   -whatis command
@@ -104,6 +109,7 @@ There are 3 types of help commands
   -man command
 whatis ls = ls(l), ls(lp) -> list directory contents
 whatis pwd = pwd(l), pwd(lp) -> print name of current/working directory, return working directory name
+
 
 **TAB Completion and Up Arrow Keys**
 Hitting TAB key completes the available commands, files, or directories
@@ -115,8 +121,62 @@ ch -> tab twice -> all the commands that start with ch
 ls l -> tab twice -> all the files that start with 'l'
 
 **Adding Text to Files**
+3 simple ways to add text to a file
+  - vi
+  - redirect command output > or >>
+  - echo > or >>
+
+echo "Jerry Seinfeld" > jerry
+cat jerry -> "Jerry Seinfeld"
+echo "Jerry show" >> jerry <--> overwrites last file
+cat jerry --> "Jerry show"
+
+date >> jerry (put date in jerry file)
+cat jerry --> Fri Feb 21 7:30 EST 2025
+
+touch listingofdir
+ls -ltr > listingofdir (print output of this into the file)
+
 
 **Input and Output Redirects (>, >>, <, stdin, stdout, and stderr)**
+There are 3 redirects in Linux
+  -stdin = standard input, file descriptor # as 0
+  -stdout = standard output, file descriptor # as 1
+  -stderr = standard error, file descriptor # as 2
+Output (stdout) - 1
+  - By default when running a command its output goes to the terminal
+  - The output of a command can be routed to a file using the > symbol
+      1. ls -l > listings
+      2. pwd > findpath
+  - If using the same file for additional output or to append to the same file, then use >>
+      1. ls -la >> listings
+      2. echo "Hello World" >> findpath
+
+pwd -> /home/user
+pwd > findpath
+cat findpath -> /home/user
+
+Input (stdin) - 0
+  - Input is used when feeding file contents to a file
+  - Examples
+      1. cat < listings
+          mail -s "Office memo" allusers@abc.com < memoletter
+  - Error (stderr) - 2
+      - stdin -0: When a command is executed, we use a keyboard
+      - stdin -1: The command output goes on the monitor
+      - stderr -2: If the command produced any error on the screen, then it's considered to be this error
+          1. We can use redirects to route errors from the screen
+          2. ls -l / root 2 > errorfile
+          3. telnet localhost 2 > errorfile
+
+telnet localhost -> Trying::1..
+                    Trying 127.0.0.1...
+                    Connection refused
+telnet localhost2 > errorfile
+               ---> Trying::1..
+                    Trying 127.0.0.1...
+cat errorfile ----> Connection refused
+
 
 **Standard Output to a File (tee command)**
 
