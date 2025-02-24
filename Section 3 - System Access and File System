@@ -1,10 +1,12 @@
 Follow My Lead.
 
+
 **Access to Linux via Putty**
   ssh, ip addr = find Linux machine IP
   ifconfig
     - to use ifconfig, run "yum install net-tools"
   -l username ip address to connect to Linux machine
+
 
 **Command Prompts and Getting Prompts Back**
   [root@MyFirstLinuxVM ~] #
@@ -15,9 +17,11 @@ Follow My Lead.
   top = provides a real-time view of running processes and system resource usage
   Ctrl C = to get unstuck, get your prompt back
 
+
 **Introduction to Linux File System**
   cd / = go into root directory
   ls -l = shows a list of different directories
+
 
 **File System Structure and its Description**
   /boot = Contains file that is used by the boot loader (grub.cfg)
@@ -38,6 +42,7 @@ Follow My Lead.
   /mnt = to mount external file system (e.g. NFS)
   /media = for cdrom mounts
 
+
 **File System Navigation Commands**
   Navigating File System
     when navigating a UNIX File System, there are a few important commands: "cd", "pwd", "ls"
@@ -46,8 +51,10 @@ Follow My Lead.
   "ls" stands for list, lists all the directories/files within a current working directory
   su- = add password, will tell you the last login
 
+
 **Linux File or Directory Properties**
   Each file or directory in Linux has detailed information or properties
+
 
 **Linux File Types**
   Directories
@@ -73,12 +80,14 @@ Follow My Lead.
   p                    Named pipe
   b                    Block device
 
+
 **Changing Password**
   Command: passwd userid
     Change your initial password as soon as you login
   Old password: -enter your current password
   New password: -enter your new password
   Retype new password: -re-enter your new password
+
 
 **Absolute and Relative Paths**
   There are 2 paths to navigate to a file system
@@ -93,6 +102,7 @@ Follow My Lead.
       cd samba
   Go to samba folder: su- (log into root) -> cd /var/log/samba
 
+
 **Creating Files and Directories**
   Ways to create files: touch, cp, vi
     touch = create a new fine (touch jerry)
@@ -102,9 +112,11 @@ Follow My Lead.
     -mkdir
   Cannot touch /etc: it's a read-only file system
 
+
 **Copying Directories**
   Command to copy a directory: cp
     -cp -R <source_folder><destination_folder>
+
 
 **Finding Files & Directories (find, locate)**
   Commands used to find files/directories
@@ -115,7 +127,8 @@ Follow My Lead.
   find / (name of file) = find the file when you don't know the directory name
     - use su- to get into 'permission denied' directory
   man find = the manual for find
-  
+
+
 **Difference Between Find and Locate**
   locate: locate uses a prebuilt database, which should be regularly updated
           can be inaccurate if the database is not updated
@@ -124,6 +137,7 @@ Follow My Lead.
   to update locate database, run updatedb
     - use su - for updatedb to get rid of error
     - find . -name susan is the same as locate susan
+
 
 **WildCards (*, ?, ^ [])**
   a wildcard is a character that can be used as a substitute for any of a class of characters in a search
@@ -138,7 +152,8 @@ Follow My Lead.
   \ = (slash) "as an escape character"
   ^ = (caret) "the beginning of the line"
   $ = (dollar sign) "the end of the line"
-  
+
+
 **Soft and Hard Links**
   inode = Pointer or number of a file on the hard disk
   Soft Link = link will be removed if file is removed or renamed
