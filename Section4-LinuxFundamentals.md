@@ -274,19 +274,32 @@ tail -1 jerry = display last line in jerry
 
 # Filters/Text Processors Commands
 cut = allows you to cut the output
+
 awk = list by the columns
+
 grep and egrep = search by keywords
+
 sort = sort command sorts output in alphabetical order
+
 uniq = will not show any duplicates
+
 wc = word count command (how many words, letters, & lines in a file)
 
 # cut - Text Processors Commands
 cut filename = does not work
+
 cut --version = check version
+
 cut -c1 filename = list one character
+
 cut -c1, 2, 4 = pick and choose character
+
 cut -c1-3, 6-8 filename = list specific range of characters
+
 cut -b1-3 filename = list by byte size
+
 cut -d: -f 6 /etc/passwd = list first 6th column separated by :
+
 cut -d: -f 6-7 /etc/passwd = list first 6 and 7th column separated by :
+
 ls -l | cut -c2-4 = only print user permissions of files/dir
