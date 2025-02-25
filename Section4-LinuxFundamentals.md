@@ -1,4 +1,4 @@
-**Linux Command Syntax**
+# Linux Command Syntax
 Command options and arguments
   - Commands typically have the syntax:
       command option(s) arguments(s)
@@ -18,7 +18,7 @@ ls --block-size=SIZE = scale sizes by SIZE before printing them
 To see these options and more, use the command "man ls"
 
 
-**Files and Directory Permissions (chmod)**
+# Files and Directory Permissions (chmod)
 There are 3 types of permissions:
   - r = read
   - w = write
@@ -37,7 +37,7 @@ chmod u+rw filename = adds read & write permissions to user
 chmod o+rw filename = adds read & write permissions to others
 
 
-**File Permissions Using Numeric Mode**
+# File Permissions Using Numeric Mode
 Permission to a file and directory can also be assigned numerically
   - chmod ugo+r FILE    OR     - chmod 444 FILE
 Owners assign permission on every file and directory
@@ -58,7 +58,7 @@ chmod 604 -> -rw----r--
 There are also online calculators for Linux permissions
 
 
-**File Ownership Commands (chown, chgrp)**
+# File Ownership Commands (chown, chgrp)
 Command to change file ownership
   -chown = changes the ownership of a file
   -chgrp = changes the group ownership of a file
@@ -66,7 +66,7 @@ Recursive ownership change option (Cascade)
   - -R
 
 
-**Access Control List (ACL)**
+# Access Control List (ACL)
 What is ACL?
   - Access Control List (ACL)
   - Provides an additional, more flexible permission mechanism for file systems
@@ -102,7 +102,7 @@ getfac1 tmp/tx <------------------> #file tmp/tx    user:: rw-
 rm tx <---------------------------> action not permitted after the last setfac
 
 
-**Help Commands**
+# Help Commands
 There are 3 types of help commands
   -whatis command
   -command --help
@@ -111,7 +111,7 @@ whatis ls = ls(l), ls(lp) -> list directory contents
 whatis pwd = pwd(l), pwd(lp) -> print name of current/working directory, return working directory name
 
 
-**TAB Completion and Up Arrow Keys**
+# TAB Completion and Up Arrow Keys
 Hitting TAB key completes the available commands, files, or directories
   - chm TAB
   - ls j<TAB>
@@ -120,7 +120,7 @@ Hitting up arrow key on the keyboard returns the last command ran
 ch -> tab twice -> all the commands that start with ch
 ls l -> tab twice -> all the files that start with 'l'
 
-**Adding Text to Files**
+# Adding Text to Files
 3 simple ways to add text to a file
   - vi
   - redirect command output > or >>
@@ -138,7 +138,7 @@ touch listingofdir
 ls -ltr > listingofdir (print output of this into the file)
 
 
-**Input and Output Redirects (>, >>, <, stdin, stdout, and stderr)**
+# Input and Output Redirects (>, >>, <, stdin, stdout, and stderr)
 There are 3 redirects in Linux
   -stdin = standard input, file descriptor # as 0
   -stdout = standard output, file descriptor # as 1
@@ -178,7 +178,7 @@ telnet localhost2 > errorfile
 cat errorfile ----> Connection refused
 
 
-**Standard Output to a File (tee command)**
+# Standard Output to a File (tee command)
 tee = command used to store & view (both at the same time) the output of any command
 the command is named after the T-splitter used in plumbing
   - breaks the output of a program so that it can be displayed & saved in a file
@@ -216,13 +216,13 @@ tee --help
   - help w/ tee command
 
 
-**Pipes (|)**
+# Pipes (|)
 A pipe is used by the shell to connect the output of one command directly to the input of another command
 symbol for pipe is a vertical bar (|)
       command1 [arguments] | command2 [arguments]
 
 
-**File Maintenance Commands (cat, less, more, head, tail)**
+# File Maintenance Commands (cat, less, more, head, tail)
 cp = copy
 rm = remove
 mv = move
