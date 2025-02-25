@@ -258,7 +258,7 @@ chown = change owner
 rm -Rf = will forcefully remove sub-directories & its contents as well
 
 
-**File Display Commands**
+# File Display Commands
 cat = display contents of a file
 more = views content of a file one page at a time, used to navigate through text files
 less = same as more, one screen at a time
@@ -272,7 +272,7 @@ head -2 messages = display first 2 lines in a file
 tail -1 jerry = display last line in jerry
 
 
-**Filters/Text Processors Commands**
+# Filters/Text Processors Commands
 cut = allows you to cut the output
 awk = list by the columns
 grep and egrep = search by keywords
@@ -280,7 +280,7 @@ sort = sort command sorts output in alphabetical order
 uniq = will not show any duplicates
 wc = word count command (how many words, letters, & lines in a file)
 
-**cut - Text Processors Commands**
+# cut - Text Processors Commands
 cut filename = does not work
 cut --version = check version
 cut -c1 filename = list one character
