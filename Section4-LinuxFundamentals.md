@@ -30,10 +30,15 @@ Each permission (rwx) can be controlled at 3 levels
 File or directory permission can be displayed by running ls -l command
 chmod = command to change permission
   - man chmod to find out more
+
 chmod g-w filename = get rid of write permission
+
 chmod a-r filename = gets rid of all read permissions
+
 chmod u-w filename = remove write permissions from user
+
 chmod u+rw filename = adds read & write permissions to user
+
 chmod o+rw filename = adds read & write permissions to others
 
 
@@ -51,10 +56,14 @@ Assigning numbers to permission types
     5    Read+Execute        r-x
     6    Read+Write          rw-
     7    Read+Write+Execute  rwx
+
 ex:chmod 764 FILE
     -rwxrw-r--
+    
 chmod 000 filename: remove permissions
+
 chmod 604 -> -rw----r--
+
 There are also online calculators for Linux permissions
 
 
@@ -82,23 +91,39 @@ Note:
   As you assign the ACL permission to a file/directory, it adds + sign at the end of the permission
   Setting w permission with ACL does not allow to remove a file
   Also, you should be using setfac1 and then getfac1 together
+
 touch tx <------------------------> create file
+
 ls -l tx <------------------------> -rw-r--r--
+
 getfac1 tx <----------------------> #file: tx        user:: rw-
+
                                    #owner: root     group::r--
+                                   
                                    #group: root     other::r--
+                                   
 setfac -m u:user:rwx /tmp/tx <----> sets permissions to the user
+
 getfac1 /tmp/tx <-----------------> #file tmp/tx    user:: rw-
+
                                 #owner: root    user:rebeccca:rw-
+                                
                                 #group: root    group::r--
+                                
                                                 mask::rw-
+                                                
                                                 other::r--
+                                                
 setfac -x u:rebeccca /tmp/tx <----> sets permissions to the user
+
 getfac1 tmp/tx <------------------> #file tmp/tx    user:: rw-
+
                                     #owner: root    user:rebeccca:rw-
+                                    
                                     #group: root    group::r--
                                                     mask::rw-
                                                     other::r--
+                                                    
 rm tx <---------------------------> action not permitted after the last setfac
 
 
